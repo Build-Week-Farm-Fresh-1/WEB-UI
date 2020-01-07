@@ -134,11 +134,16 @@ h1 {
   font-size: 6rem;
   font-weight: bold;
 }
+h2 {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
 h3 {
   font-size: 2.8rem;
 }
 h5 {
   font-size: 2.5rem;
+  font-weight: bold;
 }
 h6 {
   font-size: 2rem;
@@ -150,7 +155,7 @@ h6 {
   padding: 1rem;
 }
 header {
-  padding: 20rem;
+  padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,4 +166,38 @@ header p {
   width: 60%;
   text-align: center;
   margin: 2rem 0 2rem 0;
+}
+.purpose {
+  padding: 15rem;
+  display: flex;
+  justify-content: center;
+}
+.purpose p {
+  font-size: 2.5rem;
+  width: 60%;
+  margin: 2rem 0 2rem 0;
+}
+.purpose .landingpage-img2 {
+  width: 50%;
+}
+.howitworks {
+  margin: 15rem;
+  display: flex;
+  flex-direction: column;
+}
+.howitworks h2 {
+  text-align: center;
+}
+.howitworks .howitworks-boxes {
+  display: flex;
+}
+.howitworks .howitworks-boxes div {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  width: 25%;
+}
+.howitworks .howitworks-boxes div p {
+  font-size: 2rem;
+  margin-top: 2rem;
 }
