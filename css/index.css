@@ -89,7 +89,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  border: solid 1px red;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -129,13 +128,14 @@ table {
 }
 html {
   font-size: 62.5%;
+  color: white;
 }
 h1 {
   font-size: 6rem;
   font-weight: bold;
 }
 h2 {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 h3 {
@@ -146,13 +146,34 @@ h5 {
   font-weight: bold;
 }
 h6 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 .topnav {
+  background-color: #1f2a4c;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
+  padding: 1.5rem;
+}
+.topnav a {
+  text-decoration: none;
+  color: white;
   padding: 1rem;
+}
+.topnav div {
+  padding: 1rem;
+}
+.topnav .buttonNav {
+  background-color: #7faecc;
+  color: #1f2a4c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0rem 5rem 0rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header {
   padding: 15rem;
@@ -171,17 +192,24 @@ header p {
   padding: 15rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: #1f2a4c;
 }
-.purpose p {
-  font-size: 2.5rem;
-  width: 60%;
-  margin: 2rem 0 2rem 0;
-}
-.purpose .landingpage-img2 {
+.purpose div {
   width: 50%;
 }
+.purpose div p {
+  font-size: 3.5rem;
+  width: 60%;
+  margin: 4rem 0 4rem 0;
+  line-height: 4.5rem;
+}
+.purpose div .landingpage-img2 {
+  width: 100%;
+  border-radius: 1rem;
+}
 .howitworks {
-  padding: 15rem;
+  padding: 10rem 15rem 10rem 15rem;
   display: flex;
   flex-direction: column;
   background-color: #1f2a4c;
@@ -191,29 +219,38 @@ header p {
 }
 .howitworks .howitworks-boxes {
   display: flex;
+  margin-top: 5rem;
 }
 .howitworks .howitworks-boxes div {
   display: flex;
   flex-direction: column;
   margin: 2rem;
   width: 25%;
+  padding: 5rem;
+  background-color: #d8e7ed;
+  color: #1f2a4c;
+  border-radius: 1rem;
 }
 .howitworks .howitworks-boxes div p {
   font-size: 2rem;
   margin-top: 2rem;
 }
 .review {
-  padding: 15rem;
+  padding: 10rem 15rem 10rem 15rem;
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(white, #dcdcdc);
+  background-image: linear-gradient(white, #f0f8ff);
 }
 .review div {
   margin: 1rem;
   width: 50%;
+  padding: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #1f2a4c;
+  background-image: linear-gradient(#f0f8ff, white);
+  border-radius: 1rem;
 }
 .review div p {
   font-size: 2rem;
@@ -230,6 +267,29 @@ header p {
   margin: 2rem 0 2rem 0;
 }
 .bottomnavs {
-  padding: 10rem;
+  padding: 10rem 15rem 10rem 15rem;
+  color: #1f2a4c;
   display: flex;
+}
+.bottomnavs div {
+  display: flex;
+  width: 100%;
+}
+.bottomnavs div nav {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.bottomnavs div nav a {
+  text-decoration: none;
+  color: grey;
+  font-size: 2rem;
+  padding-top: 1.5rem;
+}
+footer {
+  color: grey;
+  padding-left: 15rem;
+}
+footer nav {
+  font-size: 1.8rem;
 }
