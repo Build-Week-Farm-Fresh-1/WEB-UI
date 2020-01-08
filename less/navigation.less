@@ -2,6 +2,7 @@
     background-color: @darkblue;
     display: flex;
     
+
     justify-content: space-between;
     font-size: 2rem;
 
@@ -13,11 +14,15 @@
         padding: 1rem;
     }
 
+
+
+
+    
     div {
         padding: 1rem;
     }
     
-    .buttonNav {
+    #buttonNav {
         background-color: @lightblue;
         color: @darkblue;
         font-size: 1.5rem;
@@ -27,6 +32,40 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: 'Maven Pro', sans-serif;
         
+    }
+
+
+    //hide multiple nav items on mobile view
+    #Shop {
+
+        @media @mobile {
+            display: none;
+        }
+    }
+    #Farms {
+    
+        @media @mobile {
+            display: none;
+        }
+    }
+    #Account {
+    
+        @media @mobile {
+            display: none;
+        }
+    }
+    #Search {
+    
+        @media @mobile {
+            display: none;
+        }
+    }
+    #SignIn {
+    
+        @media @mobile {
+            display: none;
+        }
     }
 }

@@ -6,6 +6,8 @@ header {
     align-items: center;
 
     background-image: url("img/LandingPage1.jpg");
+    //access the image to manually set width and height
+    //maxwidth use % not pixels
 
 
     p {
@@ -48,7 +50,7 @@ header {
 }
 
 .howitworks {
-    padding: 10rem 15rem 10rem 15rem;
+    padding: 10rem 2rem 10rem 2rem;
     display: flex;
     flex-direction: column;
     background-color: @darkblue;
@@ -60,13 +62,16 @@ header {
     .howitworks-boxes {
 
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
         margin-top: 5rem;
 
         div {
             display: flex;
             flex-direction: column;
             margin: 2rem;
-            width: 25%;
+            width: 15%;
 
             padding: 5rem;
             background-color: @lightlightblue;
@@ -76,10 +81,34 @@ header {
             p {
                 font-size: 2rem;
                 margin-top: 2rem;
+                font-family: 'Maven Pro', sans-serif;
             }
 
+            .icon {
+                width: 40%;
+                height: 30%;
+                
+                border: 1px solid #000000;
+                //border-radius: 10rem;
+                padding: 1rem;
+
+            }
+            
+            @media @mobile {
+                width: 100%;
+            }
+        }
+
+
+        @media @mobile {
+            //flex-wrap: wrap;
+
+  
+           
         }
     }
+
+
 
 }
 
@@ -90,7 +119,6 @@ header {
     display: flex; 
     justify-content: center;
     
-    background-image: linear-gradient(white, #f0f8ff);
 
     div {
         
@@ -101,8 +129,10 @@ header {
         flex-direction: column;
         justify-content: center;
         color: @darkblue;
-        background-image: linear-gradient(#f0f8ff, white);
         border-radius: 1rem;
+
+        box-shadow: 30px 30px 80px rgba(55, 84, 170, 0.1), 
+        -30px -30px 80px #FFFFFF, inset 4px 4px 20px rgba(255, 255, 255, 0.5);
         
         p {
             font-size: 2rem;
@@ -129,6 +159,7 @@ header {
     padding: 10rem 15rem 10rem 15rem;
     color: @darkblue;
     display: flex;
+    
 
     div {
         display: flex;
@@ -143,6 +174,7 @@ header {
                 color: grey;
                 font-size: 2rem;
                 padding-top: 1.5rem;
+                font-family: 'Maven Pro', sans-serif;
             }
         }
 
