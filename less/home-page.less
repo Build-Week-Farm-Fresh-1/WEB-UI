@@ -4,18 +4,59 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-image: url("img/LandingPage1.jpg");
-    //access the image to manually set width and height
-    //maxwidth use % not pixels
+    text-align: center;
+    justify-content: center;
 
 
+    //dark shade
+    background: 
+        linear-gradient(
+            rgba(33, 36, 41, 0.45), 
+            rgba(33, 36, 41, 0.45)
+      ),
+
+      url("img/LandingPage1.jpg");
+
+    //background-image: url("img/LandingPage1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+
+
+
+    @media @mobile {
+        padding: 10rem 2rem 10rem 2rem;
+    }
     p {
         font-size: 2.5rem;
         width: 60%;
         text-align: center;
         margin: 2rem 0 2rem 0;
+
+        @media @mobile {
+            font-weight: normal;
+            font-size: 2rem;
+            width: 100%;
+        }
     }
+
+    div {
+        display: flex;
+        flex-wrap: wrap; 
+        //width: 100%;
+        justify-content: center;
+        input {
+            .buttonShopNow(white, black);
+            //width: 20%;
+        }
+        a {
+            .buttonShopNow(@orange, white);
+           // width: 10%;
+            text-align: center;
+        }
+    }
+
+
 }
 
 .purpose {
@@ -54,6 +95,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: @darkblue;
+    
 
     h2 {
         text-align: center;
@@ -70,6 +112,8 @@ header {
         div {
             display: flex;
             flex-direction: column;
+            align-items: center;
+
             margin: 2rem;
             width: 15%;
 
@@ -77,6 +121,7 @@ header {
             background-color: @lightlightblue;
             color: @darkblue;
             border-radius: 1rem;
+            
 
             p {
                 font-size: 2rem;
@@ -87,9 +132,11 @@ header {
             .icon {
                 width: 40%;
                 height: 30%;
+                margin-bottom: 3rem;
                 
-                border: 1px solid #000000;
-                //border-radius: 10rem;
+                background-color: white;
+                border: 2px solid #000000;
+                border-radius: 10rem;
                 padding: 1rem;
 
             }
@@ -119,24 +166,51 @@ header {
     display: flex; 
     justify-content: center;
     
-
-    div {
+    
+    
+    .outerDiv {
         
-        margin: 1rem;
-        width: 50%;
-        padding: 10rem;
+      
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: @darkblue;
+        background-color: #F1F3F6;
         border-radius: 1rem;
-
+        padding: 5rem;
         box-shadow: 30px 30px 80px rgba(55, 84, 170, 0.1), 
         -30px -30px 80px #FFFFFF, inset 4px 4px 20px rgba(255, 255, 255, 0.5);
-        
-        p {
-            font-size: 2rem;
+               
+        .review-img {
+         
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            .review-icon {
+                //width: 50%;
+               // height: 40%;
+            }
+            
         }
+
+        .review-text {
+            font-size: 2rem;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: @darkblue;
+
+
+            @media @mobile {
+                margin-left: 5rem;
+            }
+
+        }
+
+    }
+
+    @media @mobile {
+        padding: 10rem 2rem 10rem 2rem;
     }
 
 }
@@ -148,10 +222,37 @@ header {
     flex-direction: column;
     align-items: center;
 
-    background-image: url("img/LandingPage3.jpg");
+
+    //dark shade
+    background: 
+        linear-gradient(
+        rgba(33, 36, 41, 0.45), 
+        rgba(33, 36, 41, 0.45)
+    ),
+
+        url("img/LandingPage3.jpg");
+
+    //background-image: url("img/LandingPage3.jpg");
+    background-size: cover;
     p {
         font-size: 2rem;
         margin: 2rem 0 2rem 0;
+    }
+
+    div {
+        display: flex;
+        flex-wrap: wrap; 
+        //width: 100%;
+        justify-content: center;
+        input {
+            .buttonShopNow(white, black);
+            //width: 20%;
+        }
+        a {
+            .buttonShopNow(@orange, white);
+           // width: 10%;
+            text-align: center;
+        }
     }
 }
 
@@ -185,8 +286,15 @@ header {
 footer {
     color: grey;
     padding-left: 15rem;
+
+    border-top: 1px solid #cccccc;
+
     nav {
         font-size: 1.8rem;
+        margin-top: 1.5rem;
+        a {
+            margin-right: 2rem;
+        }
     }
     
 }

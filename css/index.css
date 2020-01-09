@@ -136,6 +136,11 @@ h1 {
   font-size: 6rem;
   font-weight: bold;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
 h2 {
   font-size: 5rem;
   font-weight: bold;
@@ -151,9 +156,13 @@ h6 {
   font-size: 2.5rem;
   font-weight: bold;
 }
+p {
+  line-height: 3rem;
+}
 .topnav {
   background-color: #1f2a4c;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-size: 2rem;
   padding: 1.5rem;
@@ -164,7 +173,16 @@ h6 {
   padding: 1rem;
 }
 .topnav div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.topnav div .searchinput {
+  border-radius: 0.5rem;
   padding: 1rem;
+}
+.topnav div .cart-icon {
+  margin-left: 5rem;
 }
 .topnav #buttonNav {
   background-color: #7faecc;
@@ -203,18 +221,70 @@ h6 {
     display: none;
   }
 }
+.mobilenav {
+  display: none;
+}
+@media (max-width: 500px) {
+  .mobilenav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #d8e7ed;
+  }
+}
 header {
   padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("img/LandingPage1.jpg");
+  text-align: center;
+  justify-content: center;
+  background: linear-gradient(rgba(33, 36, 41, 0.45), rgba(33, 36, 41, 0.45)), url("img/LandingPage1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+}
+@media (max-width: 500px) {
+  header {
+    padding: 10rem 2rem 10rem 2rem;
+  }
 }
 header p {
   font-size: 2.5rem;
   width: 60%;
   text-align: center;
   margin: 2rem 0 2rem 0;
+}
+@media (max-width: 500px) {
+  header p {
+    font-weight: normal;
+    font-size: 2rem;
+    width: 100%;
+  }
+}
+header div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header div input {
+  background-color: white;
+  color: black;
+  padding: 1.2rem 5rem 1.2rem 5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+header div a {
+  background-color: #f46032;
+  color: white;
+  padding: 1.2rem 5rem 1.2rem 5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
 }
 .purpose {
   padding: 15rem;
@@ -254,6 +324,7 @@ header p {
 .howitworks .howitworks-boxes div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 2rem;
   width: 15%;
   padding: 5rem;
@@ -269,7 +340,10 @@ header p {
 .howitworks .howitworks-boxes div .icon {
   width: 40%;
   height: 30%;
-  border: 1px solid #000000;
+  margin-bottom: 3rem;
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 10rem;
   padding: 1rem;
 }
 @media (max-width: 500px) {
@@ -284,30 +358,72 @@ header p {
   display: flex;
   justify-content: center;
 }
-.review div {
-  margin: 1rem;
-  width: 50%;
-  padding: 10rem;
+.review .outerDiv {
+  display: flex;
+  background-color: #F1F3F6;
+  border-radius: 1rem;
+  padding: 5rem;
+  box-shadow: 30px 30px 80px rgba(55, 84, 170, 0.1), -30px -30px 80px #FFFFFF, inset 4px 4px 20px rgba(255, 255, 255, 0.5);
+}
+.review .outerDiv .review-img {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.review .outerDiv .review-text {
+  font-size: 2rem;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: #1f2a4c;
-  border-radius: 1rem;
-  box-shadow: 30px 30px 80px rgba(55, 84, 170, 0.1), -30px -30px 80px #FFFFFF, inset 4px 4px 20px rgba(255, 255, 255, 0.5);
 }
-.review div p {
-  font-size: 2rem;
+@media (max-width: 500px) {
+  .review .outerDiv .review-text {
+    margin-left: 5rem;
+  }
+}
+@media (max-width: 500px) {
+  .review {
+    padding: 10rem 2rem 10rem 2rem;
+  }
 }
 .mission {
   padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("img/LandingPage3.jpg");
+  background: linear-gradient(rgba(33, 36, 41, 0.45), rgba(33, 36, 41, 0.45)), url("img/LandingPage3.jpg");
+  background-size: cover;
 }
 .mission p {
   font-size: 2rem;
   margin: 2rem 0 2rem 0;
+}
+.mission div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mission div input {
+  background-color: white;
+  color: black;
+  padding: 1.2rem 5rem 1.2rem 5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.mission div a {
+  background-color: #f46032;
+  color: white;
+  padding: 1.2rem 5rem 1.2rem 5rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
 }
 .bottomnavs {
   padding: 10rem 15rem 10rem 15rem;
@@ -333,7 +449,12 @@ header p {
 footer {
   color: grey;
   padding-left: 15rem;
+  border-top: 1px solid #cccccc;
 }
 footer nav {
   font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+footer nav a {
+  margin-right: 2rem;
 }
