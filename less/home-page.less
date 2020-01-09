@@ -162,7 +162,7 @@ header {
             flex-direction: column;
             align-items: center;
 
-            margin: 2rem;
+            margin: 2rem 0 2rem 0;
             width: 15%;
 
             padding: 3rem;
@@ -178,14 +178,20 @@ header {
             }
 
             .icon {
-                width: 40%;
-                height: 30%;
+                max-width: 40%;
+                max-height: 30%;
+                object-fit: contain;
+
                 margin-bottom: 3rem;
                 
                 background-color: white;
                 border: 2px solid #000000;
                 border-radius: 10rem;
                 padding: 1rem;
+
+                @media @mobile {
+                    width: 30%;
+                }
 
             }
             
@@ -232,20 +238,11 @@ header {
             display: flex;
             justify-content: center;
             align-content: center;
+            margin-right: 2rem;
 
             .review-icon {
                 //width: 50%;
                // height: 40%;
-
-               @media @mobile {
-
-    
-               }
-            }
-
-            @media @mobile {
-                //width: 10%;
-               
             }
             
         }
@@ -265,6 +262,12 @@ header {
 
         }
 
+        @media @mobile {
+            //width: 80%;
+            //height: 40%;
+            max-width: inherit;
+        }
+
     }
 
     @media @mobile {
@@ -274,7 +277,7 @@ header {
 }
 
 .mission {
-    padding: 20rem 50rem 20rem 50rem;
+    padding: 20rem 30rem 20rem 30rem;
 
     display: flex;
     flex-direction: column;
