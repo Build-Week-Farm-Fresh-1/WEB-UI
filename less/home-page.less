@@ -1,3 +1,4 @@
+//header section
 header {
     padding: 15rem;
 
@@ -17,7 +18,6 @@ header {
 
       url("img/LandingPage1.jpg");
 
-    //background-image: url("img/LandingPage1.jpg");
     background-size: cover;
     background-position: center;
     height: 30rem;
@@ -41,8 +41,6 @@ header {
 
     div {
         display: flex;
-        //flex-wrap: wrap; 
-        //width: 100%;
         justify-content: center;
         input {
             .buttonShopNow(white, black);
@@ -60,14 +58,14 @@ header {
 
 }
 
+
+//our purpose section
 .purpose {
     padding: 15rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 
     color: @darkblue;
     
@@ -79,18 +77,8 @@ header {
         p {
             margin: 4rem 0 4rem 0; 
             
-            @media @mobile {
-               // order: 1;
-            }
         }
     
-        h2 {
-            @media @mobile {
-                //order: 2;
-            }
-            
-        }
- 
 
         .landingpage-img2 {
             width: 100%;
@@ -100,7 +88,6 @@ header {
                 
             }
         }
-
  
     }
 
@@ -137,6 +124,7 @@ header {
     }
 }
 
+//how it works section 
 .howitworks {
     padding: 7rem 2rem 2rem 2rem;
     display: flex;
@@ -171,6 +159,10 @@ header {
             border-radius: 1rem;
             
 
+            @media @screenwidth1000 {
+                width: 33%;
+            }
+
             p {
                 font-size: 2rem;
                 margin-top: 2rem;
@@ -200,21 +192,16 @@ header {
             }
         }
 
-
-        @media @mobile {
-            //flex-wrap: wrap;
-
-  
-           
-        }
     }
 
-
-
+    @media @screenwidth1000 {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
 }
 
 
-//maybe add another div here to give the content a bigger box
+//review section
 .review {
     padding: 10rem 15rem 10rem 15rem;
     display: flex; 
@@ -239,11 +226,6 @@ header {
             justify-content: center;
             align-content: center;
             margin-right: 2rem;
-
-            .review-icon {
-                //width: 50%;
-               // height: 40%;
-            }
             
         }
 
@@ -260,11 +242,14 @@ header {
                 margin-left: 5rem;
             }
 
+            @media @screenwidth1000 {
+                margin-left: 3rem;
+            }
+
         }
+     
 
         @media @mobile {
-            //width: 80%;
-            //height: 40%;
             max-width: inherit;
         }
 
@@ -274,11 +259,18 @@ header {
         padding: 10rem 2rem 10rem 2rem;
     }
 
+
+    @media @screenwidth1000 {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
 }
 
+//mission section
 .mission {
-    padding: 20rem 30rem 20rem 30rem;
-
+    //padding: 20rem 30rem 20rem 30rem;
+    padding: 10rem 2rem 10rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +290,19 @@ header {
     p {
         font-size: 2rem;
         margin: 2rem 0 2rem 0;
-        
+        width:  50%;
+
+        @media @mobile {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        width: 50%;
+
+        @media @mobile {
+            width: 100%;
+        }
     }
 
     div {
@@ -317,11 +321,11 @@ header {
         }
     }
 
-    @media @mobile {
-        padding: 10rem 2rem 10rem 2rem;
-    }
+
 }
 
+
+//group of bottom nav section
 .bottomnavs {
     padding: 10rem 15rem 10rem 15rem;
     color: @darkblue;
@@ -357,6 +361,7 @@ header {
     }
 }
 
+//footer section
 footer {
     display: flex;
     justify-content: space-between;
@@ -370,6 +375,8 @@ footer {
         margin-top: 1.5rem;
         a {
             margin-right: 2rem;
+            text-decoration: none;
+            color: grey;
         }
     }
 

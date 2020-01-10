@@ -89,7 +89,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  border: solid 1px red;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -196,9 +195,6 @@ p {
   border-radius: 0.5rem;
   padding: 1rem;
 }
-.topnav #Search .cart-icon {
-  margin-left: 5rem;
-}
 .topnav #buttonNav {
   background-color: #7faecc;
   color: #1f2a4c;
@@ -211,12 +207,11 @@ p {
   align-items: center;
   font-family: 'Maven Pro', sans-serif;
 }
-.topnav #Logo {
-  max-width: 100%;
-  height: auto;
+.topnav #FarmerPal {
+  padding: 0;
 }
 @media (max-width: 500px) {
-  .topnav #Logo {
+  .topnav #FarmerPal {
     width: 30%;
   }
 }
@@ -237,6 +232,11 @@ p {
 }
 @media (max-width: 500px) {
   .topnav #Search {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .topnav #cart-icon {
     display: none;
   }
 }
@@ -323,10 +323,6 @@ header div a {
 .purpose div p {
   margin: 4rem 0 4rem 0;
 }
-@media (max-width: 500px) {
-}
-@media (max-width: 500px) {
-}
 .purpose div .landingpage-img2 {
   width: 100%;
   border-radius: 1rem;
@@ -384,6 +380,11 @@ header div a {
   color: #1f2a4c;
   border-radius: 1rem;
 }
+@media (max-width: 1000px) {
+  .howitworks .howitworks-boxes div {
+    width: 33%;
+  }
+}
 .howitworks .howitworks-boxes div p {
   font-size: 2rem;
   margin-top: 2rem;
@@ -409,7 +410,11 @@ header div a {
     width: 100%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
+  .howitworks {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 .review {
   padding: 10rem 15rem 10rem 15rem;
@@ -443,6 +448,11 @@ header div a {
     margin-left: 5rem;
   }
 }
+@media (max-width: 1000px) {
+  .review .outerDiv .review-text {
+    margin-left: 3rem;
+  }
+}
 @media (max-width: 500px) {
   .review .outerDiv {
     max-width: inherit;
@@ -453,8 +463,14 @@ header div a {
     padding: 10rem 2rem 10rem 2rem;
   }
 }
+@media (max-width: 1000px) {
+  .review {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 .mission {
-  padding: 20rem 30rem 20rem 30rem;
+  padding: 10rem 2rem 10rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,6 +480,20 @@ header div a {
 .mission p {
   font-size: 2rem;
   margin: 2rem 0 2rem 0;
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .mission p {
+    width: 100%;
+  }
+}
+.mission h2 {
+  width: 50%;
+}
+@media (max-width: 500px) {
+  .mission h2 {
+    width: 100%;
+  }
 }
 .mission div {
   display: flex;
@@ -489,11 +519,6 @@ header div a {
   text-align: center;
   width: 50%;
   border-radius: 0 1rem 1rem 0;
-}
-@media (max-width: 500px) {
-  .mission {
-    padding: 10rem 2rem 10rem 2rem;
-  }
 }
 .bottomnavs {
   padding: 10rem 15rem 10rem 15rem;
@@ -540,6 +565,8 @@ footer nav {
 }
 footer nav a {
   margin-right: 2rem;
+  text-decoration: none;
+  color: grey;
 }
 @media (max-width: 500px) {
   footer {
